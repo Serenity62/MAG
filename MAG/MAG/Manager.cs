@@ -12,9 +12,10 @@ namespace MAG
         private List<Canvas> canvases;
         private StateAC currentState;
 
+
         public void ChangeState()
         {
-            
+           
         }
 
         public void AddObserver(IObserver o)

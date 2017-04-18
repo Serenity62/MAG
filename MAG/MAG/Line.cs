@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace MAG
 {
-    abstract class ShapeAC : IShape
+    class Line : ShapeAC
     {
-        public int startX, startY, endX, endY;
-
-        public abstract void Draw(Graphics g, Pen p);
+        public override void Draw(Graphics g, Pen p)
+        {
+            g.DrawLine(p, startX, startY, endX, endY);
+        }
     }
 }

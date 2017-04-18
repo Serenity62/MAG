@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MAG
 {
-    interface IShape
+    interface IDrawThread
     {
-        void Draw(Graphics g, Pen p);
+        void DrawShapes();
     }
 }
