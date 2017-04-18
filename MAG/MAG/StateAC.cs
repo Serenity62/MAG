@@ -8,11 +8,21 @@ namespace MAG
 {
     abstract class StateAC
     {
-        protected IdleState idleState;
-        protected DrawingState drawingState;
+        internal static IdleState idleState;
+        internal static DrawingState drawingState;
         public static readonly int startEvent = 1;
         public static readonly int stopEvent = 0;
+        internal static Manager m;
 
-        public abstract void ChangeState(int eventId);
+        public static StateAC Start(Manager m)
+        {
+            StateAC.m = m;
+            idleState = new IdleState();
+            drawingState = new DrawingState();
+            return idleState;
+        }
+
+        public abstract StateAC ChangeState(int eventId);
+        internal abstract void Entry();
     }
 }

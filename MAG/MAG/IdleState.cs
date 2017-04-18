@@ -8,9 +8,23 @@ namespace MAG
 {
     class IdleState : StateAC
     {
-        public override void ChangeState(int eventId)
+        public override StateAC ChangeState(int eventId)
         {
-            throw new NotImplementedException();
+            if (eventId == startEvent)
+            {
+                drawingState.Entry();
+                return drawingState;
+            }
+            return idleState;
+        }
+
+        internal override void Entry()
+        {
+            foreach (IObserver ob in m.threads)
+            {
+                ob.notify();
+                // remove from list??
+            }
         }
     }
 }

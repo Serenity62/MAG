@@ -2,15 +2,36 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MAG
 {
     class DrawingState : StateAC
     {
-        public override void ChangeState(int eventId)
+        public override StateAC ChangeState(int eventId)
         {
-            throw new NotImplementedException();
+            if (eventId == stopEvent)
+            {
+                idleState.Entry();
+                return idleState;
+            }
+            return this;
+        }
+
+        internal override void Entry()
+        {
+            foreach (Canvas c in m.canvases)
+            {
+                // create new DrawingThread
+                DrawingThread temp = new DrawingThread(c);
+                // register it
+                m.AddObserver(temp);
+                // Thread it
+                Thread t = new Thread(new ThreadStart(temp.DrawShapes));
+                // start Thread
+                t.Start();
+            }
         }
     }
 }
