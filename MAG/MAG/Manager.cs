@@ -13,19 +13,19 @@ namespace MAG
         private StateAC currentState;
 
 
-        public void ChangeState()
+        public void ChangeState(int eventId)
         {
-           
+            currentState = currentState.ChangeState(eventId);
         }
 
         public void AddObserver(IObserver o)
         {
-            throw new NotImplementedException();
+            threads.Add(o);
         }
 
         public void RemoveObserver(IObserver o)
         {
-            throw new NotImplementedException();
+            threads.Remove(o);
         }
 
         public void CopyCanvas(int canvasId)
