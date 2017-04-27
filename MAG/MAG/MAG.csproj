@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsTheme.cs" />
     <Compile Include="Canvas.cs" />
     <Compile Include="ComplexShape.cs" />
     <Compile Include="DrawingState.cs" />
@@ -57,13 +58,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericTheme.cs" />
     <Compile Include="IdleState.cs" />
-    <Compile Include="IDrawThread.cs" />
     <Compile Include="IObservable.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="ITheme.cs" />
-    <Compile Include="Line.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

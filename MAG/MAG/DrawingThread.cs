@@ -37,6 +37,7 @@ namespace MAG
         {
             while (!stop) // Check if interrupt
             {
+
                 // Randomize Color
                 p.Color = colors[rand.Next(0, colors.Length)];
 
@@ -53,6 +54,7 @@ namespace MAG
                 shape.endY = rand.Next(0, (int)c.g.DpiY);
 
                 shape.Draw(c.g, p);
+                Thread.Sleep(1000);
             }
             // Clean up code
             p.Dispose();

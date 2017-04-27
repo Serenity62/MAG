@@ -8,7 +8,7 @@ namespace MAG
 {
     class Manager : IObservable
     {
-        public List<IObserver> threads;
+        public List<IObserver> threads = new List<IObserver>();
         public List<Canvas> canvases;
         private StateAC currentState;
 

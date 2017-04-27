@@ -21,11 +21,15 @@ namespace MAG
 
         internal override void Entry()
         {
+            ITheme theme = new GenericTheme();
             foreach (Canvas c in m.canvases)
             {
                 //Load theme
-                ITheme theme = new GenericTheme();
-                theme.loadTheme(m, c);
+
+                DrawingThread temp = new DrawingThread(c);
+                m.AddObserver(temp);
+                theme.loadTheme(temp);
+                Thread.Sleep(1000);
 
 
                 //// create new DrawingThread

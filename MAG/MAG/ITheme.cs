@@ -8,7 +8,7 @@ namespace MAG
 {
     interface ITheme
     {
-        void loadTheme(Manager m, Canvas c);
+        void loadTheme(DrawingThread m);
 
  
     }
