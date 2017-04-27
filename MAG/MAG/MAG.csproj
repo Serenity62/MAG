@@ -58,15 +58,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IdleState.cs" />
+    <Compile Include="IDrawThread.cs" />
     <Compile Include="IObservable.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="ITheme.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="ShapeAC.cs" />
+    <Compile Include="ShapeFactory.cs" />
     <Compile Include="StateAC.cs" />
     <Compile Include="Triangle.cs" />
     <EmbeddedResource Include="Form1.resx">
