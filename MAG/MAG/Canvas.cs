@@ -13,7 +13,8 @@ namespace MAG
 
         public object Clone()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return new Canvas();
         }
     }
 }
