@@ -23,14 +23,19 @@ namespace MAG
         {
             foreach (Canvas c in m.canvases)
             {
-                // create new DrawingThread
-                DrawingThread temp = new DrawingThread(c);
-                // register it
-                m.AddObserver(temp);
-                // Thread it
-                Thread t = new Thread(new ThreadStart(temp.DrawShapes));
-                // start Thread
-                t.Start();
+                //Load theme
+                ITheme theme = new GenericTheme();
+                theme.loadTheme(m, c);
+
+
+                //// create new DrawingThread
+                //DrawingThread temp = new DrawingThread(c);
+                //// register it
+                //m.AddObserver(temp);
+                //// Thread it
+                //Thread t = new Thread(new ThreadStart(temp.DrawShapes));
+                //// start Thread
+                //t.Start();
             }
         }
     }

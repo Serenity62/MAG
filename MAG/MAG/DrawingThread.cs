@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MAG
 {
-    class DrawingThread : IObserver, IDrawThread
+    class DrawingThread : IObserver
     {
         public Canvas c;
         private Pen p;

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MAG
 {
-    interface ITheme
+    class AbsTheme
     {
-        void loadTheme(Manager m, Canvas c);
-
- 
+        public DrawingThread thread;
     }
 }
