@@ -53,7 +53,9 @@ namespace MAG
                 shape.endX = rand.Next(0, (int)c.g.DpiX);
                 shape.endY = rand.Next(0, (int)c.g.DpiY);
 
-                shape.Draw(c.g, p);
+                shape.Draw(c.bg, p);
+                c.g.DrawImage(c.b, 0, 0);
+
                 Thread.Sleep(1000);
             }
             // Clean up code
