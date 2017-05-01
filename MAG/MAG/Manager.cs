@@ -11,6 +11,8 @@ namespace MAG
         public List<IObserver> threads = new List<IObserver>();
         public List<Canvas> canvases;
         private StateAC currentState;
+        public ITheme theme = new GenericTheme();
+        public int selectedCanvas = -1;
 
         public Manager()
         {

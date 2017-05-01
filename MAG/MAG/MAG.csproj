@@ -49,6 +49,7 @@
     <Compile Include="AbsTheme.cs" />
     <Compile Include="Canvas.cs" />
     <Compile Include="ComplexShape.cs" />
+    <Compile Include="CoolBlueTheme.cs" />
     <Compile Include="DrawingState.cs" />
     <Compile Include="DrawingThread.cs" />
     <Compile Include="Ellipse.cs" />
@@ -59,6 +60,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GenericTheme.cs" />
+    <Compile Include="HalloweenTheme.cs" />
     <Compile Include="IdleState.cs" />
     <Compile Include="IObservable.cs" />
     <Compile Include="IObserver.cs" />
